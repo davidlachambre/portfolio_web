@@ -1,0 +1,108 @@
+<!-- MENU -->
+<div class="iconeNav">
+    <img class="iconeMenu" id="iconeMenu" src="../images/iconeMenu.png">
+</div>
+<nav id="menu" class="menu">
+    <ul class="wrapperLiens">
+        <li id="btnAccueil"><a class="btnMenu" href="#/">Accueil</a></li>
+        <li id="btnProfil"><a class="btnMenu" href="javascript:;">Profil</a></li>
+        <li id="btnProjets"><a class="btnMenu" href="javascript:;">Projets</a></li>
+        <li id="btnContact"><a class="btnMenu" href="javascript:;">Contact</a></li>
+    </ul>
+</nav>
+<p id="nomDouble" class="nomDouble">DAVID LACHAMBRE</p>
+<header id="entete" class="entete">
+    <p id="texteEntete" class="texteEntete">PORTFOLIO</p>
+    <p id="nom" class="nom">DAVID LACHAMBRE</p>
+</header>
+
+<!-- SECTION PROFIL -->
+<div id="profil" class="profil">
+    <div class="icones">
+        <a class="iconeProfil" id="iconeVideo" href="javascript:;">
+            <div>V</div>
+        </a>
+        <a class="iconeProfil" id="iconeGithub" href="https://github.com/davidlachambre" target="_blank">
+            <div>G</div>
+        </a>
+        <a  class="iconeProfil" id="iconeLinkedin" href="https://www.linkedin.com/in/david-lachambre-20090a6b" target="_blank">
+            <div>L</div>
+        </a>
+        <a  class="iconeProfil" id="iconeCV" href="documents/CV_David_Lachambre.pdf" target="_blank">
+            <div>C</div>
+        </a>
+    </div>
+    <div id="descProfil" class="descProfil">
+        <p class="desc">J'ai étudié en cinéma et en intégration multimédia et je m'intéresse au Web, au multimédia et à tout ce qui est en mouvement. Les animations pour le Web, la 3D ou la vidéo sont au centre de mes intérêt. Côté programmation, Le JavaScript et le PHP sont mes outils de prédilection pour construire des interfaces riches, interactives et dynamiques. Ce site a été réalisé avec AngularJs, en utilisant les outils du HTML5 avec ses balises video, canvas, svg et iframe. Le site a été animé à l'aide de la plateforme d'animation GreenSock, qui offre aux développeurs du web plusieurs outils professionnels qui donnent vie à nos projets.</p>
+        <div class="competences"></div>
+    </div>
+</div>
+<div id="zoneAffichageVideo" class="zoneAffichageVideo">
+    <div class="wrapperVideo">
+        <div id="fermerVideo" class="fermerVideo">X</div>
+        <video id="videoPres" controls>
+            <source src="projets/videos/presentation.mp4" type="video/mp4">
+            <source src="projets/videos/presentation.ogv" type="video/ogv">
+            Votre navigateur ne supporte pas la balise <code>video</code>
+        </video>
+    </div>
+</div>
+
+<!-- SECTION PROJETS -->
+<div id="projets" class="projets">
+
+    <!-- ----------------------------------- -->
+    <!-- modèle NG REPEAT qui créer dynamiquement le contenu en fonctions du nombre de projets dans la requête Ajax -->
+    <article class="contenu" ng-repeat="projet in projets">
+        <section>
+            <div class="titreProjet">{{projet.titre}}</div>
+            <p class="techProjet">{{projet.technologies}}</p>
+            <p class="descProjet">
+                <bdi>{{projet.description}}</bdi>
+            </p>
+        </section>
+        <a class="wrapperImgProjet" href="javascript:;" ng-click="choisirProjet(this.projet.titre, this.projet.url_site, this.projet.idProjet, this.projet.description, this.projet.credits)">
+            <div class="fillHover"></div>
+            <img class="imageProjet" ng-src='{{projet.thumbnail}}' onerror='this.src="images/placeholder.jpg";'>
+        </a>
+    </article>
+    <!-- ----------------------------------- -->
+</div>
+
+<!-- ZONE POUR AFFICHER TOUS LES PROJETS -->
+<div id="zoneAffichageProjets" class="zoneAffichageProjets">
+    <input type="hidden" value="{{idProjet}}">
+    <div id="navProjet" class="navProjet">
+        <div class="wrapperBtnNavProjet">
+            <input ng-click="changerProjet('arriere')" id="btnPrecedent" class="btnNavProjet" type="button" value="précédent">
+            <input ng-click="changerProjet('avant')" id="btnSuivant" class="btnNavProjet" type="button" value="suivant">
+            <input id="btnInfoProjet" class="btnNavProjet" type="button" value="info">
+        </div>
+        <h1 id="titreProjet">Projet {{titreProjet}}</h1>
+        <input ng-click="resetLien()" type="button" id="fermerProjet" class=" fermer btnNavProjet" value="fermer">
+    </div>
+    <iframe onload="iframeLoaded()" id="iframeProjets" ng-src="{{lienProjet}}" frameborder="0" allowfullscreen>
+        <p>
+            Ce navigateur ne supporte pas la technologie iframe.
+            <br>
+            <a href="{{lienProjet}}" target="_blank">Cliquez ici pour ouvrir le lien dans une nouvelle fenêtre</a>
+        </p>
+    </iframe>
+    <div id="infoProjet" class="infoProjet">
+        <p class="descAffichageProjet">{{descAffichageProjet}}</p>
+        <p class="creditsProjet">{{creditsProjet}}</p>
+    </div>
+</div>
+
+<!-- SECTION CONTACT -->
+<div id="contact" class="contact">
+    <h3 id="titreContact">Contactez moi</h3>
+    <form id="formContact" class="champs" ng-submit="soumettreMessage()">
+        <textarea id="txtAreaMessage" ng-model="utilisateur.message" placeholder="Message" value="{{utilisateur.message}}" required></textarea>
+        <div>
+            <input id="inputNomContact" type="text" ng-model="utilisateur.nom" placeholder="Nom" value="{{utilisateur.nom}}" required>
+            <input id="inputCourrielContact" type="text" ng-model="utilisateur.courriel" placeholder="Courriel" value="{{utilisateur.courriel}}" required>
+            <input id="btnSoumettreContact" class="btnSoumettreMsg" type="submit" value="soumettre">
+        </div>
+    </form>
+</div>

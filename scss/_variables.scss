@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:900);
+
+$police-principale: 'Lato', sans-serif;
+$police-secondaire: 'Work Sans', sans-serif;
+
+$vert: #12ad3a;
+$vertAlpha: rgba(18, 173, 58, 0.75);
+$vertHover: #29FF83;
+$bleu: #152554;
+$bleuLogo: #284586;
+$bleuTexteEntete: #D2DCFB;
+$bleuTexteEnteteFlash: #7593ef;
+$bleuAlpha: rgba(73, 115, 240, 0.25);
+$bleuAlphaClair: rgba(131, 162, 255, 0.4);
+$couleurOmbre: rgba(44, 18, 0, 0.2);
+
+$couleurToastSucces: rgba(18, 173, 58, 0.8);
+$couleurToastTraitement: rgba(250, 212, 0, 0.8);
+$couleurToastErreur: rgba(168, 0, 0, 0.8);
