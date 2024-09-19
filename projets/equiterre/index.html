@@ -1,0 +1,397 @@
+<!DOCTYPE HTML> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--règle viewport pour affichage mobile correcte-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!--amazingslider-1.css est utilisé exclusivement pour les styles du diaporama d'images-->
+        <link rel="stylesheet" type="text/css" href="css/amazingslider-1.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/amazingslider.js"></script>
+        <script src="js/initslider-1.js"></script>
+        <script src="js/menu_mobile.js"></script>
+        <title>Équiterre - page d'accueil</title>
+    </head> 
+    <body>
+        <header>
+            <nav id="nav_principale">
+                <div class="contenu">
+                    <div id="logo">
+                        <a target="_blank" href="http://www.equiterre.org/">
+                            <img src="images/logo_equiterre.gif" alt="logo équiterre">
+                        </a>
+                    </div>
+                    <div id="nav_mobile">
+                        <div id="btn_nav_mobile" class="btn_mobile_normal">
+                        </div>
+                        <ul id="menu_nav_mobile">
+                            <li><a href="#">ACCUEIL</a></li>
+                            <li><a href="#">À PROPOS</a></li>
+                            <li><a href="#">PROJETS</a></li>
+                            <li><a href="#">ÉVÉNEMENTS</a></li>
+                            <li><a href="#">SOLUTIONS</a></li>
+                            <li><a href="#">PUBLICATIONS</a></li>
+                            <li><a href="#">RECHERCHE</a></li>
+                            <li><a href="#">CONTACTEZ-NOUS</a></li>
+                            <li><a href="#">DONNEZ</a></li>
+                         </ul>
+                    </div>
+                    <form id="recherche" name="search" class="contenu" method="post" action="http://www.equiterre.org/recherche/results" target="_blank">
+                        <input type="search">
+                        <input type="submit" title="soumettre la requête" value="">
+                        <a href="http://www.equiterre.org/recherche/" target="_blank" title="recherche avancée" onclick=""></a>
+                    </form>
+                     <div id="res_sociaux">
+                        <a href="https://www.facebook.com/pages/%C3%89quiterre/117926081552324?ref=ts" target="_blank" title="Facebook">
+                        </a>
+                        <a href="https://twitter.com/equiterre/" target="_blank" title="Twitter">
+                        </a>
+                        <a href="https://www.youtube.com/user/equiterreONG" target="_blank" title="Youtube">
+                         </a>
+                         <a href="https://www.flickr.com/photos/equiterre/" target="_blank" title="Flickr">
+                         </a>
+                    </div>
+                </div>
+                <ul id="nav_menu" class="clear contenu">
+                    <li><a href="#" id="current" class="page_active">ACCUEIL</a></li>
+                    <li><a href="#">À<span style="color:white">_</span>PROPOS</a>
+<!--Le span du "À Propos" sert à masquer le "_". Ce caractère est essentiel car il permet de régler un bug d'affichage dû à la méthode "table-cell" du menu nav qui ne fonctionne pas bien lorsqu'il y a plus d'un mot par cellule-->
+                        <ul>
+                            <li><a href="#">MISSION</a></li>
+                            <li><a href="#">HISTORIQUE</a></li>
+                            <li><a href="#">ÉQUIPE</a></li>
+                            <li><a href="#">MÉDIAS</a></li>
+                            <li><a href="#">RAPPORTS ANNUELS</a></li>
+                            <li><a href="#">PLAN STRATÉGIQUE</a></li>
+                            <li><a href="#">BÉNÉVOLAT</a></li>
+                            <li><a href="#">CONTACTEZ-NOUS</a></li>
+                         </ul>
+                    </li>
+                    <li><a href="#">PROJETS</a>
+                        <ul>
+                            <li><a href="#">ALIMENTATION</a></li>
+                            <li><a href="#">AGRICULTURE</a></li>
+                            <li><a href="#">HABITATION</a></li>
+                            <li><a href="#">CONSOMMATION</a></li>
+                            <li><a href="#">TRANSPORT</a></li>
+                         </ul>
+                    </li>
+                    <li><a href="#">ÉVÉNEMENTS</a></li>
+                    <li><a href="#">SOLUTIONS</a>
+                        <ul>
+                            <li><a href="#">POUR LE CITOYEN</a></li>
+                            <li><a href="#">POUR L'ENTREPRISE</a></li>
+                         </ul>
+                    </li>
+                    <li><a href="#">PUBLICATIONS</a>
+                        <ul>
+                            <li><a href="#">COMMUNIQUÉS DE PRESSE</a></li>
+                            <li><a href="#">ARTICLES DE PRESSE</a></li>
+                            <li><a href="#">BULLETIN D'INFORMATION</a></li>
+                            <li><a href="#">DOSSIERS "CHOIX DE SOCIÉTÉ"</a></li>
+                            <li><a href="#">ÉTUDES</a></li>
+                            <li><a href="#">ARCHIVES</a></li>
+                         </ul>
+                    </li>
+                    <li id="btn_donnez"><a href="https://www.jedonneenligne.org/equiterre/frm_detail.php?FrmUID=9" target="_blank">DONNEZ</a></li>
+                </ul>
+                
+                
+                
+                
+               
+                
+                
+                
+                
+            </nav>
+            <!--DÉBUT ZONE DIAPORAMA-->
+            <div id="bg_zone_diapo">
+                <div id="zone_diapo" class="clear contenu"> 
+                    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1130px;margin:0px auto 0px;">
+                        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+                            <ul class="amazingslider-slides" style="display:none;">
+                                <!--Attention au texte contenu dans le "alt" et le "data-description". Il est utilisé dynamiquement par le plugin jQuery pour générer la légende texte du diaporama-->
+                                <li><img src="images/TarSands_Kids.jpg" alt="Doux parfum de sables bîtumineux" data-description="Les enfants habitant près de Fort McMurray, où l’industrie du pétrole canadien exploite les sables bitumineux depuis des décénies, doivent porter des masques lorqu'ils sortent à l’extérieur en raison des particules nocives présentes dans l’air." />
+                                </li>
+                                <li><img src="images/polar_bear.jpg" alt="Les glaciers fondent à un rythme alarmant" data-description="Un des effets les plus marquants du réchauffement climatique est la fonte des glaces en Arctique et l’augmentation du niveau des océans. L&apos;ours polaire en paye le prix malgré lui car il est aux premières loges de cette catastrophe climatique." />
+                                </li>
+                                <li><img src="images/petrol_alberta.jpg" alt="La planète fait de la fièvre" data-description="La production et l&apos;utilisation du pétrole ont contribué massivement aux émissions mondiales de gaz à effet de serre, augmentant les concentrations de dioxyde de carbone dans l&apos;atmosphère et leurs conséquences sur notre climat." />
+                                </li>
+                                <li><img src="images/woman-fair-trade.jpg" alt="Vers un commerce plus équitable" data-description="La Martinique emboîte le pas du commerce équitable. Elle s&apos;efforce depuis peu de créer une dynamique commerciale fondée sur le dialogue, la transparence et le respect des travailleurs, visant plus d&apos;équité dans le commerce international." />
+                                </li>
+                                <li><img src="images/pipeline.jpg" alt="Énergie Est beaucoup trop risqué" data-description="Le Québec recevra peu d’avantages du projet d'oléoduc de TransCanada, alors que les quelques emplois créés le seront surtout pendant la phase de construction. Les bénéfices économiques à long terme pour la province s&apos;avèrent marginaux." />
+                                </li>
+                            </ul>
+                            <!--thumbnails pour le mouse over des "bullets nav" du diaporama-->
+                            <ul class="amazingslider-thumbnails" style="display:none;">
+                                <li><img src="images/thumbnails/TarSands_Kids-tn.jpg" alt="Sables bîtumineux de l&apos;Alberta" /></li>
+                                <li><img src="images/thumbnails/polar_bear-tn.jpg" alt="Le Grand Nord en péril" /></li>
+                                <li><img src="images/thumbnails/petrol_alberta-tn.jpg" alt="La planète est malade" /></li>
+                                <li><img src="images/thumbnails/woman-fair-trade-tn.jpg" alt="Vers un commerce équitable" /></li>
+                                <li><img src="images/thumbnails/pipeline-tn.jpg" alt="Énergie Est trop risqué" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIN ZONE DIAPORAMA-->
+        </header>
+        <!--La div "support_main" permet à la balise "main" de "s'appuyer" dessus et crée l'espace vide nécessaire pour laisser apparaître l'image principale en tout temps-->
+        <!--Le "clear" du "support_main" est pour l'affichage mobile-->
+        <div id="support_main" class="contenu clear"></div>
+            <!--La div "bg_main" permet de mettre une couleur solide sous les articles. Important en raison des éléments du header en position static-->
+        <div id="bg_main">
+            <main  class="contenu">
+                <!--Zone titre mise à l'extérieur de la section des articles car celle-ci est en mode 3 colones-->
+                <h1>
+                    NOS ARTICLES RÉCENTS
+                </h1>
+                <!--DÉBUT DE LA ZONE DES ARTICLES-->
+                <!--Dans un contexte de site réel, le contenu des articles serait généré dynamiquement en javascript-->
+                <div id="articles_accueil">
+                    <a href="#" onclick="popup('popUpDiv')">
+                        <article class="teinte">
+                            <img src="images/img_article_1.jpg" alt="premier article de la page">
+                            <section>
+                                <h2>
+                                    Marée noire à la nuit blanche
+                                </h2>
+                                <p>
+                                    Équiterre vous invite à une grande marée noire à la Nuit blanche de Montréal. Cette année, Équiterre et ses partenaires vous ont concocté une soirée spécialement explosive où les discussions sur les projets pétroliers seront de mise, un cocktail noir à la main. Le 28 février, dès 20 h, c’est à la Maison du développement durable qu’il faut être. On vous lance un défi! Obtenez un cocktail pétrolier GRATUITEMENT en échange de 30 signatures à la pétition « Non aux sables bitumineux »
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_2.jpg" alt="deuxième article de la page">
+                            <section>
+                                <h2>
+                                    Une société du savoir ? Non merci !
+                                </h2>
+                                <p>
+                                    On parle de plus en plus de la société du 21e siècle comme d’une société du savoir. La Chine a dépassé les États-Unis en termes d’investissements dans les énergies propres et investit maintenant plus dans les renouvelables que dans le charbon. Les États-Unis dépensent six fois plus que nous le faisons au Canada, par personne, dans les technologies propres comme celle de l’énergie solaire. Apple vient d’ailleurs tout juste d’annoncer 500 millions $ pour que tous ses magasins en Californie soient alimentés par ce type d’énergie.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_3.jpg" alt="troisième article de la page">
+                            <section>
+                                <h2>
+                                    Marche contre Énergie Est
+                                </h2>
+                                <p>
+                                    Les opposants à la construction d’un port pétrolier à Cacouna par la compagnie TransCanada se sont fait entendre, dimanche en journée, pour dénoncer l’impact de certains travaux sur la population de bélugas du fleuve Saint-Laurent. Dans le cadre du projet de pipeline Énergie Est, TransCanada mène des travaux préparatoires en milieu marin, à un endroit où se trouvent des bélugas. L’entreprise souhaite par ces opérations préciser sa demande d’approbation de projet à l’Office national de l’énergie. Pour mener ses sondages géophysiques, l’entreprise projette dans le fleuve de multiples secousses, similaires à des coups de canon et atteignant les 230 décibels, dans un secteur déterminé.
+                                </p>                           
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_4.jpg" alt="quatrième article de la page">
+                            <section>
+                                <h2>
+                                    Vers une dérèglementation des sables bitumineux
+                                </h2>
+                                <p>
+                                    Stephen Harper a fait savoir mardi qu’il n’entend pas réglementer le secteur pétrolier et gazier, pourtant responsable de la hausse continue des émissions de gaz à effet de serre canadiennes. « Honnêtement, dans le contexte actuel du secteur pétrolier et gazier, il serait insensé d’imposer des pénalités unilatérales à ce secteur. Nous ne ferons certainement pas cela », a affirmé le premier ministre au cours de la période des questions à la Chambre des communes.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_5.jpg" alt="cinquième article de la page">
+                            <section>
+                                <h2>
+                                    Cacouna matata
+                                </h2>
+                                <p>
+                                    Nous avons le devoir de préserver l’habitat du béluga et le jugement obtenu par le CQDE démontre pour nous que le projet de port pétrolier dans son ensemble est totalement incompatible avec un secteur considéré comme une pouponnière de bélugas. Si les scientifiques considère ce secteur comme une zone de rétablissement de l’espèce alors nous réclamons d’en faire une véritable zone de protection marine. Ainsi nous exhortons le gouvernement du Québec à refuser le projet de TransCanada et à privilégier la protection du béluga.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_6.jpg" alt="sixième article de la page">
+                            <section>
+                                <h2>
+                                    Des trempettes d’hiver idéales pour ajouter des légumes au menu
+                                </h2>
+                                <p>
+                                    Le mois de février, pourtant un mois assez court, semble très long! Surtout quand il fait -20 degrés la majorité du temps! Difficile de manger frais durant cette période glaciale. Faisons un pied de nez à cette température et mangeons des légumes bien frais, à l'aide de ces trois recettes. Au menu : trois trempettes et leurs accompagnements. 1. Skordaliá de céleri-rave; une trempette grecque à base de pommes de terre et de céleri-rave servie avec des quartiers de betteraves. 2. Trempette tiède aux champignons (Duxelles); un classique de Georges, aromatisé au thym et servi avec quelques tranches de pain baguette. 3. Humus à la courge; une trempette aux pois chiches et à la purée de courge (poivrée, butternut ou autre) et aux piments de Cayenne servi avec des carottes d’hiver.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_7.jpg" alt="septième article de la page">
+                            <section>
+                                <h2>
+                                    Québec s’active pour freiner le déclin des abeilles
+                                </h2>
+                                <p>
+                                    Grâce à la pression exercée pour forcer les autorités à restreindre l’utilisation des pesticides néonicotinoïdes, le gouvernement du Québec serait en train de préparer des interventions pour empêcher le déclin des abeilles et autres pollinisateurs. C’est ce que nous apprenait la semaine dernière l’hebdomadaire agricole La Terre de chez nous. Le ministère du Développement durable, de l’Environnement et de la Lutte contre les changements climatiques est à refondre les exigences en matière des pesticides et resserrer les conditions d’utilisation des pesticides les plus à risque en milieu agricole, dont les néonicotinoïdes. 
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_8.jpg" alt="huitième article de la page">
+                            <section>
+                                <h2>
+                                    Keystone XL obtient l’aval du congrès américain
+                                </h2>
+                                <p>
+                                    La saga Keystone XL entre dans son dernier acte: le Congrès à majorité républicaine a autorisé mercredi la construction de l'oléoduc entre le Canada et les Etats-Unis, contesté par les écologistes, et malgré le veto attendu de Barack Obama. Après une interminable bataille politique, et plus de six ans après la première demande de permis de construire de l'opérateur canadien TransCanada, la Chambre des représentants a adopté en dernière lecture une loi autorisant le projet transfrontalier de 1.900 km, dont 1.400 aux Etats-Unis. 
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_9.jpg" alt="neuvième article de la page">
+                            <section>
+                                <h2>
+                                    Faisons de Montréal une ville équitable
+                                </h2>
+                                <p>
+                                    Après les villes de La Pêche, Neuville, Sainte-Anne-de-Bellevue, Sherbrooke et Trois-Rivières au Québec, Montréal pourrait devenir la 20e ville équitable au Canada. Un groupe d'acteurs engagés a récemment été créé dans le but de faire reconnaître Montréal comme ville équitable : Fairtrade Montréal Équitable. Sa mission est de positionner la ville de Montréal sur l’échiquier mondial en tant que ville engagée dans le commerce équitable.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_10.jpg" alt="dixième article de la page">
+                            <section>
+                                <h2>
+                                    600 M$ pour 8 km d’autoroute ou pour le transport collectif ?
+                                </h2>
+                                <p>
+                                    Le prolongement de l'autoroute 19 sur une distance de 8 km qui relierait l'autoroute 440 à l'autoroute 640, entre Laval et Bois-des-Filion est un projet à emprise locale qui devrait concerner TOUS les Québécois. Des sommes importantes, 500 à 600 millions de dollars, seraient investies dans un projet touchant près de 7000 personnes au moment où d'importantes coupures budgétaires sont faites dans divers programmes publics et où certaines sociétés de transport en commun doivent réduire leurs services.
+
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_11.jpg" alt="onzième article de la page">
+                            <section>
+                                <h2>
+                                    Les cas d’asthme infantile en hausse au Québec
+                                </h2>
+                                <p>
+
+La pollution automobile pourrait être liée à 14 % des cas d'asthme chronique chez l'enfant, un impact comparable à celui du tabagisme passif, selon une étude réalisée dans dix villes européennes. L'étude publiée vendredi dans la version électronique de la revue European Respiratory Journal, a comparé l'exposition des enfants vivant à proximité d'un axe très pollué (transportant plus de 10 000 véhicules jour) à ceux vivant plus loin.
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="teinte">
+                            <img src="images/img_article_12.jpg" alt="douzième article de la page">
+                            <section>
+                                <h2>
+                                    Nouvelle étude sur les OGM et le cancer
+                                </h2>
+                                <p>
+                                    Une étude qui conclut que le maïs transgénique donne le cancer aux rats a fait la une des journaux en France et créé bien des remous au Québec depuis la semaine dernière. Son auteur, le biologiste français Gilles-Éric Séralini, publie ce matin au Québec son livre Tous cobayes! Le préambule du livre de Gilles-Éric Séralini, biologiste à l'Université de Caen et président du conseil scientifique du Centre de recherche et d'information indépendantes sur le génie génétique (CRIIGEN), ONG qui regroupe des chercheurs et des environnementalistes, va droit au but: l'industrie agroalimentaire est à elle seule responsable de l'augmentation du nombre de maladies chroniques et de cancers dans les dernières décennies
+                                </p>
+                                <img src="images/icone_txt_cache.png" alt="fade">
+                                <img src="images/icone_lire_plus.png" alt="icone lire article" class="lire_plus">
+                            </section>
+                        </article>
+                    </a>
+                </div>
+                <!--FIN DE LA ZONE DES ARTICLES-->
+                <div id="pagination">
+                    <P>page : 
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </P>
+                </div>
+            </main>
+        </div>
+        <div id="bg_pied_de_page">
+            <footer id="pied_de_page" class="contenu">
+                <div>
+                    <a href="#">
+                        Accédez à votre compte
+                    </a>
+                    <a href="#">
+                        Devenez membre
+                    </a>
+                    <a href="#">
+                        Contactez-nous
+                    </a>
+                    <p>
+                        Copyright © 2015.
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="images/pieds_verts-medium.png" alt="lien permettant de revenir en haut de la page">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        Nos archives
+                    </a>
+                    <a href="#">
+                        Recherche avancée
+                    </a>
+                     <a href="#">
+                        Bulletin d'information
+                    </a>
+                    <p>
+                        Langue :
+                        <select name="langue">
+                            <option value="Français">français</option>
+                            <option value="English">english</option>
+                        </select>
+                    </p>
+                </div>
+                <div id="pied_de_page_mobile">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

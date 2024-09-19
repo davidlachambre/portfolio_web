@@ -1,0 +1,868 @@
+@charset "utf-8";
+
+/*====================== CHARTE DE COULEURS =======================*/
+/*
+QUASI-NOIR : #150800
+ORANGE : #f57945 (logo)
+GRIS-BRUN : #948075 (logo)
+GRIS PALE : #d7d0ca
+GRIS TRÈS PALE : #ede9e6
+*/
+
+
+/*========================== CSS RESET ============================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+    text-decoration: none;
+}
+ HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*======================= STYLES GÉNÉRAUX =========================*/
+body {
+	line-height: 1.5;
+    background: #ede9e6;
+    font-family: "Source Sans Pro", arial;
+    font-size: 1.1em;
+    color: #948075;
+}
+main {
+/*Permet de régler un bug d'affichage dans IE*/
+    display: block;
+}
+a {
+    color: #f57945;
+}
+/*---------------------------------------------
+CLASSES
+---------------------------------------------*/
+.clear {
+/*Classe pour resetter le HTML après les éléments en float*/
+    clear: both;
+}
+.contenu {
+/*Classe qui permet de définir la largeur des éléments de contenu indépendement du background qui lui prend toujours la largeur entière du browser*/
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+/*La classe "teinte" permet de créer un hover sur l'article qui change la luminosité de l'image associée*/
+.teinte {
+    position: relative;
+}
+.teinte:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 218px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.teinte:hover:before {
+    background: none;
+}
+.page_active {
+    color: #f57945 !important;
+}
+/*---------------------------------------------
+BARRE NAV - GÉNÉRAL
+---------------------------------------------*/
+#nav_mobile {
+/*Cette section n'apparaît qu'en mobile*/
+    display: none;
+}
+#nav_principale {
+    -webkit-box-shadow: inset 0 0 25px 0 rgba(21, 8, 0, 0.75);
+    -moz-box-shadow: inset 0 0 25px 0 rgba(21, 8, 0, 0.75);
+    box-shadow: 0 0 25px 0 rgba(21, 8, 0, 0.75);
+    padding-bottom: 25px;
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 200;
+}
+#nav_principale li:hover ul {
+    display:block;
+}
+#nav_principale ul {
+    padding-top: 4px;
+}
+#nav_principale li ul {
+    display:none;
+    position:absolute;
+}
+#nav_principale li li {
+    display:block;
+    width:100%;
+    background:#f57945;
+}
+#nav_principale li {
+    display: table-cell;
+    width: 0.1%;
+}
+#nav_principale li a {
+    text-align:center;
+    border-left: 1px solid #d7d0ca;
+}
+#nav_principale li a:hover{
+ background:#f57945;
+ color:white !important;
+}
+#nav_principale ul li ul li a {
+    color: white;
+    font-size: 0.7em;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid 2px rgba(245, 121, 69, 0);
+}
+#nav_principale ul li ul li a:hover {
+    color:#f57945 !important;
+    border: solid 2px #f57945;
+    background:white;
+}
+#nav_principale a {
+    display: block;
+    padding: 2px 0;
+    color: #948075;
+}
+#nav_principale a:hover {
+    color: white;
+}
+/*---------------------------------------------
+RÉSEAUX SOCIAUX
+---------------------------------------------*/
+#nav_principale #res_sociaux {
+    position: relative;
+}
+#nav_principale #res_sociaux a {
+    float: right;
+    position: absolute;
+}
+#nav_principale #res_sociaux a:last-child {
+    background: url(../images/icone_flickr.gif) no-repeat;
+    background-size: 29px 29px;
+    height: 26px;
+    width: 29px;
+    top: 25px;
+    right: 289px;
+}
+#nav_principale #res_sociaux a:last-child:hover {
+    background: url(../images/icone_flickr_hilight.gif) no-repeat;
+    background-size: 29px 29px;
+}
+#nav_principale #res_sociaux a:nth-child(3) {
+    background: url(../images/icone_youtube.gif) no-repeat;
+    background-size: 29px 29px;
+    height: 26px;
+    width: 29px;
+    top: 25px;
+    right: 343px;
+}
+#nav_principale #res_sociaux a:nth-child(3):hover {
+    background: url(../images/icone_youtube_hilight.gif) no-repeat;
+    background-size: 29px 29px;
+}
+#nav_principale #res_sociaux a:nth-child(2) {
+    background: url(../images/icone_twitter.gif) no-repeat;
+    background-size: 29px 29px;
+    height: 26px;
+    width: 29px;
+    top: 25px;
+    right: 397px;
+}
+#nav_principale #res_sociaux a:nth-child(2):hover {
+    background: url(../images/icone_twitter_hilight.gif) no-repeat;
+    background-size: 29px 29px;
+}
+#nav_principale #res_sociaux a:first-child {
+    background: url(../images/icone_facebook.gif) no-repeat;
+    background-size: 29px 29px;
+    height: 26px;
+    width: 29px;
+    top: 25px;
+    right: 451px;
+}
+#nav_principale #res_sociaux a:first-child:hover {
+    background: url(../images/icone_facebook_hilight.gif) no-repeat;
+    background-size: 29px 29px;
+}
+/*---------------------------------------------
+BOUTON DONNEZ
+---------------------------------------------*/
+#nav_principale #btn_donnez {
+    background: #9fc706;
+}
+#nav_principale #btn_donnez a {
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 -4px 2px 0 #82a206;
+}
+#nav_principale #btn_donnez a:hover {
+    color: white;
+    background: #b6e30a;
+    box-shadow: inset 0 -4px 2px 0 #9ec603;
+}
+#nav_principale #btn_donnez a:focus {
+    box-shadow: inset 0 4px 2px 0 #82a206;
+}
+#nav_principale #btn_donnez a:focus:hover {
+    box-shadow: inset 0 4px 2px 0 #9ec603;
+}
+/*---------------------------------------------
+LOGO
+---------------------------------------------*/
+#nav_principale #logo {
+    float: left;
+    margin-top: 14px;
+    width: 150px;
+}
+#nav_principale #logo img {
+    width: 100%;
+}
+/*---------------------------------------------
+BARRE DE RECHERCHE
+---------------------------------------------*/
+#nav_principale #recherche {
+    float: right;
+    height: 25px;
+    width: 210px;
+    margin-top: 25px;
+    border: solid 2px #948075;
+    position: relative;
+}
+#nav_principale #recherche:hover {
+    border: solid 2px #f57945;
+}
+#nav_principale #recherche input {
+    border: 0;
+    color: #948075;
+    font-family: "Source Sans Pro", arial;
+}
+#nav_principale #recherche input:focus {
+/*Permet d'éliminer le contour bleu quand on clique sur l'input*/
+    outline: none;
+}
+#nav_principale #recherche input:first-child {
+    height: 23px;
+    width: 197px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    overflow: hidden;
+}
+#nav_principale #recherche input:nth-child(2) {
+    background: url(../images/icone_loupe.png) no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 2px;
+    right: 30px;
+}
+#nav_principale #recherche input:nth-child(2):hover {
+    background: url(../images/icone_loupe_hilight.png) no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+#nav_principale #recherche a {
+    background: url(../images/icone_plus.png) no-repeat #948075;
+    background-size: 14px 14px;
+    background-position: center;
+    width: 25px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#nav_principale #recherche a:hover {
+    background: url(../images/icone_plus.png) no-repeat #f57945;
+    background-size: 14px 14px;
+    background-position: center;
+}
+/*---------------------------------------------
+ZONE DIAPO
+---------------------------------------------*/
+#zone_diapo {
+    max-height: 750px;
+    overflow: hidden;
+    padding-top: calc(36px + 2%);
+}
+#bg_zone_diapo {
+    background: url(../images/bg_fixe_accueil.png) #e4dfdb bottom;
+    position: fixed;
+    width: 100%;
+}
+/*---------------------------------------------
+ZONE DES ARTICLES
+---------------------------------------------*/
+#support_main {
+    padding-top: 66.8%;
+}
+#bg_main {
+    -webkit-box-shadow: inset 0 0 10px 0 rgba(21, 8, 0, 0.5);
+    -moz-box-shadow: inset 0 0 10px 0 rgba(21, 8, 0, 0.5);
+    box-shadow: 0 0px 10px 0 rgba(21, 8, 0, 0.5);
+    background-color: #ede9e6;
+/*doit absoluement être en position relative pour passer "par dessus" la zone diapo*/
+    position: relative !important;
+}
+#bg_main main h1 {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+#articles_accueil {
+    -moz-column-count: 3;
+    -moz-column-gap: 25px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 25px;
+    column-count: 3;
+    column-gap: 25px;
+}
+#articles_accueil article img {
+    width: 100%;
+}
+#articles_accueil article section {
+    padding-bottom: 25px;
+    position: relative;
+    height: 186px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+#articles_accueil article section img:nth-child(3) {
+/*Dégradé placé sur la dernière ligne de chaque article*/
+    width: 250px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+#articles_accueil article section .lire_plus {
+/*Icone "+" pour accéder à l'article*/
+    width: 20px;
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+}
+#articles_accueil article section .lire_plus:hover {
+    background-color: white;
+}
+#articles_accueil article section h2 {
+    padding: 10px 0;
+    font-weight: 700;
+}
+#articles_accueil article section p {
+    text-align: justify;
+    padding-bottom: 10px;
+}
+#articles_accueil a {
+    color: #948075;
+}
+/*---------------------------------------------
+PAGINATION BAS DE PAGE
+---------------------------------------------*/
+#pagination {
+    text-align: right;
+    padding: 0 0 50px 0;
+    font-weight: 700;
+    margin-right: -11px;
+}
+#pagination a {
+    margin-left: 15px;
+    padding: 3px 10px;
+    border: 2px solid rgba(255, 0, 0, 0);
+    border-radius: 25px;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+#pagination a:first-child {
+/*Simule la page active. Devrait être codée différement dans un contexte de site réel*/
+    margin-left: 25px;
+    padding: 3px 10px;
+    border-radius: 25px;
+    background: white;
+    border: 2px solid #f57945;
+}
+#pagination a:hover {
+    border-radius: 25px;
+    border: 2px solid #f57945;
+}
+/*---------------------------------------------
+FOOTER
+---------------------------------------------*/
+#pied_de_page {
+    line-height: 1.7em;
+    height: 166px;
+}
+#pied_de_page a {
+    display: block;
+    color: #948075;
+}
+#pied_de_page a:hover {
+    color: #f57945;
+}
+#pied_de_page div {
+    width: 33.33333%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#pied_de_page div:first-child {
+    float: left;
+    text-align:left;
+}
+#pied_de_page div:nth-child(2) {
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+}
+#pied_de_page div:nth-child(2) a img {
+/*Ancre de bas de page stylisée*/
+    margin-top: 25px;
+    width: 30%;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#pied_de_page div:nth-child(2) a img:hover {
+    transform: rotate(360deg);
+}
+#pied_de_page div:nth-child(3) {
+    float: right;
+    text-align: right;
+}
+#pied_de_page div:first-child p {
+/*Ligne du copyright*/
+    color: #d7d0ca;
+}
+#pied_de_page select {
+    color: #f57945;
+    font-weight: 700;
+}
+#bg_pied_de_page {
+    background: white;
+    position: relative;
+    -webkit-box-shadow: inset 0 0 10px 0 rgba(21, 8, 0, 0.25);
+    -moz-box-shadow: inset 0 0 10px 0 rgba(21, 8, 0, 0.25);
+    box-shadow: 0 0px 10px 0 rgba(21, 8, 0, 0.25);
+}
+#pied_de_page_mobile {
+/*Cet élément n'apparaît qu'en affichage mobile*/
+    display: none;
+}
+/*fin des STYLES GÉNÉRAUX*/
+
+
+
+/*===================== STYLES DE GOSSAGE =======================*/
+
+@media (min-width: 980px) { 
+/*---------------------------------------------*/
+    #nav_principale ul {
+/*permet d'ajuster la grosseur de la typo dans la barre nav afin que tous les éléments de menu soient visibles*/
+        font-size: 1.2em;
+    }
+    #zone_diapo {
+        padding-top: 39px;
+    }
+}
+@media (min-width: 769px) and (max-width: 980px) { 
+/*---------------------------------------------*/
+/*Pour recadrer la zone diapo correctement*/
+    #support_main {
+        padding-top: 68.6%;
+    }
+}
+/*fin des STYLES DE GOSSAGE*/
+
+
+
+/*===================== STYLES ÉCRANS 1200px =======================*/
+
+@media (min-width: 1200px) {   
+/*---------------------------------------------*/
+    
+#support_main {
+/*Cet ajustement rend le padding fixe une fois la largeur max du contenu atteinte*/
+        padding-top: 790px !important;
+    }
+}
+/*fin des STYLES ÉCRANS 1200px*/
+
+
+
+/*======================= STYLES TABLETTES =========================*/
+
+@media (max-width: 768px) {
+/*---------------------------------------------*/
+    body {
+        font-size: 1em;
+        line-height: 1.4em;
+    }
+/*---------------------------------------------
+NAV PRINCIPALE
+---------------------------------------------*/
+    #nav_principale {
+        padding-bottom: 18px;
+    }
+    #nav_principale ul {
+        font-size: .8em;
+        font-weight: 400;
+    }
+    #nav_principale #logo {
+        margin-top: 13px;
+        width: 100px;
+    } 
+    #nav_principale #recherche {
+        height: 20px;
+        width: 150px;
+        margin-top: 17px;
+    }
+    #nav_principale #recherche input:first-child {
+    height: 17px;
+    width: 118px;
+    }
+    #nav_principale #recherche input:nth-child(2) {
+        background-size: 15px 15px;
+        width: 16px;
+        height: 16px;
+    }
+    #nav_principale #recherche input:nth-child(2):hover {
+        background-size: 15px 15px;
+    }
+    #nav_principale #recherche a {
+        background-size: 9px 9px;
+        width: 20px;
+        height: 17px;
+    }
+    #nav_principale #recherche a:hover {
+        background-size: 9px 9px;
+    }
+    #nav_principale #res_sociaux a:last-child {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+        top: 17px;
+        right: 199px;
+    }
+    #nav_principale #res_sociaux a:last-child:hover {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+    }
+    #nav_principale #res_sociaux a:nth-child(3) {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+        top: 17px;
+        right: 238px;
+    }
+    #nav_principale #res_sociaux a:nth-child(3):hover {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+    }
+    #nav_principale #res_sociaux a:nth-child(2) {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+        top: 17px;
+        right: 277px;
+    }
+    #nav_principale #res_sociaux a:nth-child(2):hover {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+    }
+    #nav_principale #res_sociaux a:first-child {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+        top: 17px;
+        right: 316px;
+    }
+    #nav_principale #res_sociaux a:first-child:hover {
+        background-size: 24px 24px;
+        height: 21px;
+        width: 24px;
+    }
+        #nav_principale ul li ul li a {
+        font-size: 1.4em;
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+/*---------------------------------------------
+ZONE DIAPO
+---------------------------------------------*/
+    #zone_diapo {
+        background: #d7d0ca;
+        padding-top: 38px;
+    }
+    #support_main {
+/*Cet ajustement rend le padding fixe une fois la largeur max du contenu atteinte*/
+        padding-top: 68.9%;
+    }
+/*---------------------------------------------
+ZONE DES ARTICLES
+---------------------------------------------*/
+    #articles_accueil {
+        -moz-column-gap: 15px;
+        -webkit-column-gap: 15px;
+        column-gap: 15px;
+    }
+    #articles_accueil article section {
+        height: 174px;
+        margin-bottom: 40px;
+    }
+    #articles_accueil article section img {
+        bottom: 2px;
+    }
+    #articles_accueil article section img:nth-child(3) {
+        bottom: 0px;
+        width: 70%;
+        height: 25px;
+    }
+    #articles_accueil article section .lire_plus {
+        width: 15px;
+        bottom: 6px;
+    }
+/*---------------------------------------------
+FOOTER
+---------------------------------------------*/
+    #pied_de_page div:nth-child(2) {
+/*Pour faire disparaître l'ancre du pied de page en format tablette + mobile*/
+        display: none;
+    }
+/*---------------------------------------------
+CLASSES
+---------------------------------------------*/
+    .contenu {
+        padding: 0 15px;
+    }
+    .teinte {
+        display: initial; /*Marche dans Chrome et FF*/
+    }
+    .teinte:before {
+        background: rgba(0, 0, 0, 0); /*workaround pour IE*/
+    }
+}
+/*fin des STYLES TABLETTES*/
+
+
+
+/*======================= STYLES MOBILES ==========================*/
+
+@media (max-width: 480px) {
+/*---------------------------------------------*/
+    #menu_nav_mobile {
+        background: white;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        display: none;
+        font-size: 1.5em !important;
+        -webkit-box-shadow: 0 10px 15px -3px rgba(21, 8, 0, 0.5);
+        -moz-box-shadow: 0 10px 15px -3px rgba(21, 8, 0, 0.5);
+        box-shadow: 0 10px 15px -3px rgba(21, 8, 0, 0.5);
+    }
+    #menu_nav_mobile li {
+        width: 100%;
+        display: block;
+    }
+    #menu_nav_mobile a {
+        width: 100%;
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    #menu_nav_mobile li:last-child a {
+        background: #82a206;
+        color: white;
+    }
+    #btn_nav_mobile {
+        background: url(../images/icone_menu_mobile_highlight.gif) no-repeat;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+    }
+    #btn_nav_mobile.btn_mobile_normal {
+        background: url(../images/icone_menu_mobile.gif) no-repeat;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+    }
+    #nav_principale {
+        padding-bottom: 6px;
+    }
+    #nav_principale #logo {
+        margin-top: 24px;
+        padding-right: 5%;
+        width: 190px;
+        max-width: 60%;
+    }
+    #nav_mobile {
+        display: block;
+        float: right;
+    }
+    #nav_principale {
+        height: 100px;
+    }
+    #nav_principale ul {
+        padding-top: 0px;
+    }
+    #nav_principale #recherche {
+/*Élément de la barre nav éliminée en mode mobile*/
+        display: none;
+    }
+    #nav_principale #res_sociaux {
+/*Élément de la barre nav éliminée en mode mobile*/
+        display: none;
+    }
+    #nav_menu li {
+/*Élément de la barre nav éliminée en mode mobile*/
+        display: none;
+    }
+    #bg_zone_diapo {
+/*Élément du header éliminée en mode mobile*/
+        display: none;
+    }
+    #support_main {
+        padding-top: 100px;
+    }
+    #bg_main main h1 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    #articles_accueil {
+/*On passe à 1 colone en largeur mobile*/
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+    #articles_accueil a:nth-child(7), #articles_accueil a:nth-child(8), #articles_accueil a:nth-child(9), #articles_accueil a:nth-child(10), #articles_accueil a:nth-child(11), #articles_accueil a:last-child {
+/*Affichage des 6 premiers articles seulement, les 6 autres ne seront pas chargés*/
+        display: none;
+    }
+    #articles_accueil article section {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        height: 253px;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #d7d0ca;
+    }
+    #articles_accueil article section p {
+        text-align: left;
+    }
+    #articles_accueil article section img:nth-child(3) {
+        bottom: 0px;
+        width: 70%;
+        height: 35px;
+    }
+    #articles_accueil article section .lire_plus {
+/*Élément des articles éliminée en mode mobile*/
+        display: none;
+    }
+    #pagination {
+        text-align: center;
+    }
+    #pied_de_page {
+        height: auto;
+    }
+    #pied_de_page div:first-child {
+/*Élément du footer éliminée en mode mobile*/
+        display: none;
+    }
+    #pied_de_page div:nth-child(3) {
+/*Élément du footer éliminée en mode mobile*/
+        display: none;
+    }
+    #pied_de_page #pied_de_page_mobile {
+        display: block;
+        width: 100%;
+        height: 50px;
+    }
+    #pied_de_page #pied_de_page_mobile a {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    #pied_de_page #pied_de_page_mobile a:first-child {
+        background: url(../images/icone_facebook_hilight.gif) no-repeat;
+        background-size: 50px 50px;
+/*Fonction calc() utilisée pour calculer le padding pour qu'il soit responsive*/
+        padding-right: calc((100% - 60px) / 3);
+    }
+    #pied_de_page #pied_de_page_mobile a:nth-child(2) {
+        background: url(../images/icone_twitter_hilight.gif) no-repeat;
+        background-size: 50px 50px;
+/*Fonction calc() utilisée pour calculer le padding pour qu'il soit responsive*/
+        padding-right: calc((100% - 60px) / 3);
+    }
+    #pied_de_page #pied_de_page_mobile a:nth-child(3) {
+        background: url(../images/icone_youtube_hilight.gif) no-repeat;
+        background-size: 50px 50px;
+/*Fonction calc() utilisée pour calculer le padding pour qu'il soit responsive*/
+        padding-right: calc((100% - 60px) / 3);
+    }
+    #pied_de_page #pied_de_page_mobile a:last-child {
+        background: url(../images/icone_flickr_hilight.gif) no-repeat;
+        background-size: 50px 50px;
+    }
+    .contenu {
+        padding: 0 10px;
+    }
+}
+/*fin des STYLES MOBILES*/
