@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Démo GreenSock - TIMELINEMAX</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="GreenSock Timelinemax Tweenlite">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--    <link rel="stylesheet" type="text/css" href="librairies/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">-->
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h1 class="titreSite">Présentation</h1><img id="logoGreenSock" class="logoGreensock" src="images/logo_greensock.png">
+            <h1 class="titreSite">GreenSock</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html">ACCUEIL</a>
+            <a href="greensock_tweenmax.html">TWEENMAX</a>
+            <a href="greensock_timelinemax.html" class="pageActive">TIMELINEMAX</a>
+            <a href="greensock_plugins.html">PLUGINS</a>
+        </nav>
+    </header>
+
+    <p class="demo intro">Cette page sert à illustrer les principales fonctionalités de TimelineMax, le module secondaire de la librairie GreenSock. Il est à noter que le module Timelinelite n'est pas présenté, puisqu'il s'agit essentiellement d'une version allégée de TimelineMax, à la différence qu'il n'intègre pas quelques fonctionalités additionnelles comme currentLabel(), addCallback(), removeCallback(), tweenTo(), tweenFromTo(), getLabelAfter(), getLabelBefore() et getActive().</p>
+
+    <!-- AttrPlugin -->
+    <section class="demo">
+        <h3>TimelineMax <span style="color:#a8a8a8;">(Moteur de la librairie GreenSock qui permet le chaînage et le raffinement des animations)</span></h3>
+        <div class="contenu timelinemax">
+            <div class="objAnim1Timelinemax"></div>
+            <div class="objAnim2Timelinemax"></div>
+            <div class="objAnim3Timelinemax"></div>
+            <p class="conteneurFrames">Progression : <span class="affichageProgression">0 %</span></p>
+            <div class="boutonsTimelinemax">
+                <input type="button" class="boutonTimelinemax playTimelinemax" value="jouer">
+                <input type="button" class="boutonTimelinemax pauseTimelinemax" value="pause">
+                <input type="range" class="boutonTimelinemax progTimelinemax" value="0">
+                <input type="button" class="boutonTimelinemax rejouerTimelinemax" value="rejouer">
+                <input type="button" class="boutonTimelinemax reverseTimelinemax" value="inverser">
+            </div>
+            <div class="elemVitesse">
+                <span>Vitesse : </span>
+                <input type="range" class="boutonTimelinemax vitesseTimelinemax" value="50">
+                <input type="button" class="boutonTimelinemax resetVitesseTimelinemax" value="reset">
+            </div>
+        </div>
+        <div class="attribution">
+            <a href="http://www.1001freedownloads.com/free-vectors/">Free Vector</a><span>by</span><a href="http://www.1001freedownloads.com">1001FreeDownloads.com</a>
+        </div>
+        <div class="separateurGroupeInputs">
+            <div class="inputs">
+                <input type="text" class="t1p1Timelinemax" placeholder="Tween 1 prop. 1">
+                <input type="text" class="t1v1Timelinemax" placeholder="Tween 1 val. 1">
+                <input type="text" class="t1p2Timelinemax" placeholder="Tween 1 prop. 2">
+                <input type="text" class="t1v2Timelinemax" placeholder="Tween 1 val. 2">
+                <input type="text" class="t1p3Timelinemax" placeholder="Tween 1 prop. 3">
+                <input type="text" class="t1v3Timelinemax" placeholder="Tween 1 val. 3">
+            </div>
+            <div class="inputs">
+                <input type="text" class="offsetT1Timelinemax" placeholder="Offset (sec)">
+                <input type="text" class="dureeT1Timelinemax" placeholder="Durée (sec)">
+                <select class="easeT1Timelinemax">
+                    <option value="">Transition</option>
+                    <option value="Power0">Power 0</option>
+                    <option value="Power1">Power 1</option>
+                    <option value="Power2">Power 2</option>
+                    <option value="Power3">Power 3</option>
+                    <option value="Power4">Power 4</option>
+                    <option value="Back">Back</option>
+                    <option value="Elastic">Elastic</option>
+                    <option value="Bounce">Bounce</option>
+                    <option value="Rough">Rough</option>
+                    <option value="SlowMo">SlowMo</option>
+                    <option value="Stepped">Stepped</option>
+                    <option value="Circ">Circ</option>
+                    <option value="Expo">Expo</option>
+                    <option value="Sine">Sine</option>
+                </select>
+            </div>
+        </div>
+        <div class="separateurGroupeInputs">
+            <div class="inputs">
+                <input type="text" class="t2p1Timelinemax" placeholder="Tween 2 prop. 1">
+                <input type="text" class="t2v1Timelinemax" placeholder="Tween 2 val. 1">
+                <input type="text" class="t2p2Timelinemax" placeholder="Tween 2 prop. 2">
+                <input type="text" class="t2v2Timelinemax" placeholder="Tween 2 val. 2">
+                <input type="text" class="t2p3Timelinemax" placeholder="Tween 2 prop. 3">
+                <input type="text" class="t2v3Timelinemax" placeholder="Tween 2 val. 3">
+            </div>
+            <div class="inputs">
+                <input type="text" class="offsetT2Timelinemax" placeholder="Offset (sec)">
+                <input type="text" class="dureeT2Timelinemax" placeholder="Durée (sec)">
+                <select class="easeT2Timelinemax">
+                    <option value="">Transition</option>
+                    <option value="Power0">Power 0</option>
+                    <option value="Power1">Power 1</option>
+                    <option value="Power2">Power 2</option>
+                    <option value="Power3">Power 3</option>
+                    <option value="Power4">Power 4</option>
+                    <option value="Back">Back</option>
+                    <option value="Elastic">Elastic</option>
+                    <option value="Bounce">Bounce</option>
+                    <option value="Rough">Rough</option>
+                    <option value="SlowMo">SlowMo</option>
+                    <option value="Stepped">Stepped</option>
+                    <option value="Circ">Circ</option>
+                    <option value="Expo">Expo</option>
+                    <option value="Sine">Sine</option>
+                </select>
+            </div>
+        </div>
+        <div class="separateurGroupeInputs">
+            <div class="inputs">
+                <input type="text" class="t3p1Timelinemax" placeholder="Tween 3 prop. 1">
+                <input type="text" class="t3v1Timelinemax" placeholder="Tween 3 val. 1">
+                <input type="text" class="t3p2Timelinemax" placeholder="Tween 3 prop. 2">
+                <input type="text" class="t3v2Timelinemax" placeholder="Tween 3 val. 2">
+                <input type="text" class="t3p3Timelinemax" placeholder="Tween 3 prop. 3">
+                <input type="text" class="t3v3Timelinemax" placeholder="Tween 3 val. 3">
+            </div>
+            <div class="inputs">
+                <input type="text" class="offsetT3Timelinemax" placeholder="Offset (sec)">
+                <input type="text" class="dureeT3Timelinemax" placeholder="Durée (sec)">
+                <select class="easeT3Timelinemax">
+                    <option value="">Transition</option>
+                    <option value="Power0">Power 0</option>
+                    <option value="Power1">Power 1</option>
+                    <option value="Power2">Power 2</option>
+                    <option value="Power3">Power 3</option>
+                    <option value="Power4">Power 4</option>
+                    <option value="Back">Back</option>
+                    <option value="Elastic">Elastic</option>
+                    <option value="Bounce">Bounce</option>
+                    <option value="Rough">Rough</option>
+                    <option value="SlowMo">SlowMo</option>
+                    <option value="Stepped">Stepped</option>
+                    <option value="Circ">Circ</option>
+                    <option value="Expo">Expo</option>
+                    <option value="Sine">Sine</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startTimelinemax" value="animer">
+            <input type="button" class="boutonReset resetTimelinemax" value="reset" disabled>
+        </div>
+    </section>
+    <script src="librairies/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/easing/EasePack.min.js"></script>
+
+    <script src="librairies/CubicBezier-js/CubicBezier.js"></script>
+
+    <script src="./js/page_timelinemax.js"></script>
+    <script src="./js/general.js"></script>
+</body>
+
+</html>

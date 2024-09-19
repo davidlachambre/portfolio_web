@@ -1,0 +1,670 @@
+:root {
+    --couleurLogo: #96D000;
+}
+
+/*----------------------------------------------------------------------------
+----------------------------------- GÉNÉRAL ----------------------------------
+----------------------------------------------------------------------------*/
+
+html {
+    font-family: "Lato";
+}
+
+nav.nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #e3e3e3;
+    background-color: #575757;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.logoGreensock {
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 6px;
+    margin-right: 18px;
+}
+.headerTop {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px;
+}
+nav.nav a {
+    padding-bottom: 0;
+}
+nav.nav a:hover:not(.pageActive) {
+    border-top: solid 2px var(--couleurLogo);
+    border-bottom: solid 2px var(--couleurLogo);
+}
+.demo {
+    margin: 0 auto 50px auto;
+    background-color: #e3e3e3;
+    width: 90%;
+    max-width: 960px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.demo.intro {
+    text-align: justify;
+}
+.contenu {
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 2px white;
+    background-color: #f0f0f0;
+}
+div {
+    /* Initialisation du sélecteur (nécessaire pour CSSRulePlugin) */
+}
+section {
+    /* Initialisation du sélecteur (nécessaire pour CSSRulePlugin) */
+}
+a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    padding: 0 10px 2px 10px;
+    border-radius: 6px;
+    border-top: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+    transition: all 0.25s;
+}
+a:hover:not(.pageActive) {
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.pageActive {
+    color: var(--couleurLogo);
+}
+h1,
+h2,
+h3,
+h4 {
+    padding: 10px;
+}
+h1.titreSite {
+    padding: 5px 10px 0 0;
+    display: inline-block;
+    color: var(--couleurLogo);
+    font-size: 24px;
+    font-weight: bold;
+}
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+h3 {
+    color: black;
+    background-color: #f0f0f0;
+    padding: 0;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: solid 2px white;
+    font-size: 14px;
+}
+h4 {
+    color: #c3c1c1;
+}
+h5 {
+    margin-bottom: 10px;
+}
+p {
+    text-align: center;
+    font-size: 14px;
+}
+input {
+    /* Initialisation du sélecteur (nécessaire pour CSSRulePlugin) */
+}
+input,
+select {
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    width: 140px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: outset 2px white;
+    background-color: #e3e3e3;
+    outline: none;
+}
+input:active,
+select:active {
+    border: inset 2px white;
+}
+input:disabled,
+select:disabled {
+    color: #cecece;
+}
+input[type="text"] {
+    border: inset 2px white;
+    width: 127px;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+.boutonReset {
+    color: #00b700;
+}
+.noir {
+    color: black;
+    transition: all 1s;
+}
+.bleu {
+    color: blue;
+    font-weight: 900;
+    transition: all 1s;
+}
+pre {
+    color: grey;
+    background-color: #f0f0f0;
+    padding: 10px;
+    white-space: pre-wrap;
+    border: inset 2px white;
+    border-radius: 5px;
+    height: 85px;
+    overflow-y: scroll;
+}
+.attribution {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.attribution * {
+    border: solid 2px transparent;
+    margin: 0;
+    padding: 0 2px;
+}
+
+/*----------------------------------------------------------------------------
+----------------------------------- PLUGINS ----------------------------------
+----------------------------------------------------------------------------*/
+
+.liensPlugins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+.liensPlugins a {
+    margin: 0;
+    display: inline-block;
+    color: var(--couleurLogo);
+}
+
+/*--------------------- ATTR PLUGIN ---------------------*/
+
+.attrPlugin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    overflow: visible;
+    background-image: url(../images/tourbillon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*--------------------- BEZIER PLUGIN ---------------------*/
+
+.bezierPlugin {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    background-image: url(../images/paysage.svg);
+    background-size: cover;
+    background-position: center top;
+}
+.divAnimeeBezier {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    height: 150px;
+    width: 150px;
+    -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    /* Chrome, Safari, Opera */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+.pointBezier1,
+.pointBezier2,
+.pointBezier3,
+.pointBezier4,
+.pointBezier5,
+.pointBezier6 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #005bc6;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 2px -1px rgba(0, 0, 0, 0.2);
+}
+.pointBezier1 {
+    top: 50px;
+    left: 10%;
+}
+.pointBezier2 {
+    top: 300px;
+    left: 30%;
+}
+.pointBezier3 {
+    top: 200px;
+    left: 50%;
+}
+.pointBezier4 {
+    top: 250px;
+    left: 70%;
+}
+.pointBezier5 {
+    top: 150px;
+    left: 90%;
+}
+.pointBezier6 {
+    top: 150px;
+    left: 120%;
+}
+
+/*--------------------- COLOR PROPS PLUGIN ---------------------*/
+
+.cpPlugin {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/peinture.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.rondCpPlugin1,
+.rondCpPlugin2,
+.rondCpPlugin3,
+.rondCpPlugin4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    border: 4px dotted;
+    border-radius: 104px;
+}
+.rondCpPlugin1,
+.rondCpPlugin3 {
+    transform: translate(-174px, -104px);
+}
+.rondCpPlugin2,
+.rondCpPlugin4 {
+    transform: translate(-34px, -104px);
+}
+
+/*--------------------- CSS PLUGIN ---------------------*/
+
+.cssPlugin {
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/ecriture_css.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.wrapperCarreCssPlugin {
+    perspective: 300px;
+    -webkit-perspective: 300px;
+}
+.carreCssPlugin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 4px solid;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.logoCss {
+    height: 80px;
+    width: 60px;
+    background-image: url(../images/logo_css3.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*--------------------- CSS RULE PLUGIN ---------------------*/
+
+.cssRulePlugin {
+    background-image: url(../images/bulles.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.rangeeCssRulePlugin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rangeeCssRulePlugin:first-child {
+    margin-top: 40px;
+}
+.rangeeCssRulePlugin:last-child {
+    margin-bottom: 40px;
+}
+.rangeeCssRulePlugin p,
+.rangeeCssRulePlugin h3,
+.rangeeCssRulePlugin div {
+    padding: 0;
+    margin: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 52px;
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
+}
+.x {
+    /* Initialisation du sélecteur (nécessaire pour CSSRulePlugin) */
+}
+.y {
+    /* Initialisation du sélecteur (nécessaire pour CSSRulePlugin) */
+}
+
+/*--------------------- DIRECTIONAL ROTATION PLUGIN ---------------------*/
+
+.drPlugin {
+    position: relative;
+    background-image: url(../images/horloges.svg);
+    height: 500px;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: left center;
+}
+.drPlugin img {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200px, -200px);
+}
+
+/*--------------------- SCROLL TO PLUGIN ---------------------*/
+
+.contenu.scrollToPlugin {
+    height: 500px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.contenu.scrollToPlugin p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.scrollToPlugin a {
+    display: inline-block;
+    color: var(--couleurLogo);
+}
+.carre1 {
+    background-color: red;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+.rond1 {
+    background-color: blue;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+/*--------------------- TEXT PLUGIN ---------------------*/
+
+.paragrapheTextPlugin {
+    font-size: 24px;
+    text-align: left;
+    margin: 20px;
+    word-break: keep-all;
+}
+.arriveeTxtPlugin,
+.departTxtPlugin {
+    width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+.contenu.textPlugin {
+    min-height: 200px;
+    background-image: url(../images/clavier.svg);
+    background-size: 1100px;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+/*----------------------------------------------------------------------------
+--------------------------- TWEENMAX & TIMELINEMAX ---------------------------
+----------------------------------------------------------------------------*/
+
+.problemeEase {
+    margin-bottom: 50px;
+}
+.problemeEase a {
+    color: var(--couleurLogo);
+}
+.back,
+.elastic,
+.rough,
+.slowMo,
+.stepped {
+    display: none;
+}
+.easeBezier,
+.easeGreensock {
+    display: none;
+}
+.groupeInputsReg {
+    height: 0;
+    overflow: hidden;
+}
+.separateurGroupeInputs {
+    border-bottom: inset 1px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.conteneurFrames {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+}
+.affichageFrames {
+    display: inline-block;
+    margin-left: 10px;
+}
+.wrapperOptionsEase {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------
+----------------------------------- TWEENMAX ---------------------------------
+----------------------------------------------------------------------------*/
+
+.tweenmax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    background-image: url(../images/tweenmax.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.objAnim1Tweenmax,
+.objAnim2Tweenmax,
+.objAnim3Tweenmax,
+.objAnim4Tweenmax,
+.objAnim5Tweenmax {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.5), 0 3px 5px -1px rgba(0, 0, 0, 0.5);
+}
+
+/*----------------------------------------------------------------------------
+----------------------------------- TIMELINE ---------------------------------
+----------------------------------------------------------------------------*/
+
+.timelinemax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    background-image: url(../images/timelinemax.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.objAnim1Timelinemax,
+.objAnim2Timelinemax,
+.objAnim3Timelinemax {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.5), 0 3px 5px -1px rgba(0, 0, 0, 0.5);
+}
+.boutonsTimelinemax {
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boutonTimelinemax:not([type="range"]) {
+    width: 75px;
+}
+.boutonTimelinemax.vitesseTimelinemax {
+    width: 100px;
+}
+.boutonTimelinemax.progTimelinemax {
+    width: 300px;
+}
+.elemVitesse {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    align-items: center;
+    color: white;
+}
+.elemVitesse span {
+    margin: 0;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+}
+.elemVitesse .resetVitesseTimelinemax {
+    padding: 2px;
+    width: 50px;
+}
+/*CODE SOURCE RANGE INPUT: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/*/
+
+.boutonTimelinemax[type="range"] {
+    padding: 0;
+    -webkit-appearance: none;
+    background: transparent;
+}
+.boutonTimelinemax[type=range]:focus {
+    outline: none;
+}
+.boutonTimelinemax[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+.boutonTimelinemax[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px outset;
+    height: 30px;
+    width: 10px;
+    border-radius: 3px;
+    background: #e3e3e3;
+    cursor: pointer;
+    margin-top: -14px;
+}
+.boutonTimelinemax[type=range]::-moz-range-thumb {
+    border: 2px outset;
+    height: 30px;
+    width: 10px;
+    border-radius: 3px;
+    background: #e3e3e3;
+    cursor: pointer;
+}
+.boutonTimelinemax[type=range]::-ms-thumb {
+    border: 2px outset;
+    height: 30px;
+    width: 10px;
+    border-radius: 3px;
+    background: #e3e3e3;
+    cursor: pointer;
+}
+.boutonTimelinemax[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5.4px;
+    cursor: pointer;
+    background: #e3e3e3;
+    border-radius: 2px;
+}
+.boutonTimelinemax[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5.4px;
+    cursor: pointer;
+    background: #e3e3e3;
+    border-radius: 2px;
+}
+.boutonTimelinemax[type=range]::-ms-track {
+    width: 100%;
+    height: 5.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Démo GreenSock - TWEENMAX</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="GreenSock Tweenmax Tweenlite">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--    <link rel="stylesheet" type="text/css" href="librairies/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">-->
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h1 class="titreSite">Présentation</h1><img id="logoGreenSock" class="logoGreensock" src="images/logo_greensock.png">
+            <h1 class="titreSite">GreenSock</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html">ACCUEIL</a>
+            <a href="greensock_tweenmax.html" class="pageActive">TWEENMAX</a>
+            <a href="greensock_timelinemax.html">TIMELINEMAX</a>
+            <a href="greensock_plugins.html">PLUGINS</a>
+        </nav>
+    </header>
+
+    <p class="demo intro">Cette page sert à illustrer les principales fonctionalités de TweenMax. Il est à noter que le module Tweenlite n'est pas présenté, puisqu'il s'agit essentiellement d'une version allégée de TweenMax, à la différence qu'il n'intègre pas quelques fonctionalités additionnelles comme repeat(), repeatDelay() et yoyo(). De plus, plusieurs plugins sont chargés par défaut avec TweenMax. C'est plugins seront définis séparéments dans la page des plugins.</p>
+
+    <!-- AttrPlugin -->
+    <section class="demo">
+        <h3>TweenMax <span style="color:#a8a8a8;">(Coeur de la librairie GreenSock qui permet l'animation de tous les éléments)</span></h3>
+        <div class="contenu tweenmax">
+            <div class="objAnim1Tweenmax"></div>
+            <div class="objAnim2Tweenmax"></div>
+            <div class="objAnim3Tweenmax"></div>
+            <p class="conteneurFrames">Frame : <span class="affichageFrames">0</span></p>
+        </div>
+        <div class="attribution">
+            <a href="http://www.1001freedownloads.com/free-vectors/">Free Vector</a><span>by</span><a href="http://www.1001freedownloads.com">1001FreeDownloads.com</a>
+        </div>
+        <div class="groupeTransitions separateurGroupeInputs">
+            <div class="inputs">
+                <select class="typeTransitionTweenmax">
+                    <option value="">Transitions</option>
+                    <option value="greensock">GreenSock</option>
+                    <option value="bezier">Bezier</option>
+                </select>
+            </div>
+            <div class="inputs easeBezier">
+                <input type="text" class="easeInXTweenmax" placeholder="Ease In X">
+                <input type="text" class="easeInYTweenmax" placeholder="Ease In Y">
+                <input type="text" class="easeOutXTweenmax" placeholder="Ease Out X">
+                <input type="text" class="easeOutYTweenmax" placeholder="Ease Out Y">
+            </div>
+            <div class="inputs easeGreensock">
+                <div class="inputs">
+                    <select class="easeTweenmax">
+                        <option value="">Type transition</option>
+                        <option value="Power0">Power 0</option>
+                        <option value="Power1">Power 1</option>
+                        <option value="Power2">Power 2</option>
+                        <option value="Power3">Power 3</option>
+                        <option value="Power4">Power 4</option>
+                        <option value="Back">Back</option>
+                        <option value="Elastic">Elastic</option>
+                        <option value="Bounce">Bounce</option>
+                        <option value="Rough">Rough</option>
+                        <option value="SlowMo">SlowMo</option>
+                        <option value="Stepped">Stepped</option>
+                        <option value="Circ">Circ</option>
+                        <option value="Expo">Expo</option>
+                        <option value="Sine">Sine</option>
+                    </select>
+                    <select class="easeDirectionTweenmax">
+                        <option value="">Direction</option>
+                        <option value="easeInOut">Entrant-sortant</option>
+                        <option value="easeIn">Entrant</option>
+                        <option value="easeOut">Sortant</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <div class="wrapperOptionsEase">
+                        <div class="inputs back">
+                            <input type="text" class="overshootBack" placeholder="Recul">
+                        </div>
+                        <div class="inputs elastic">
+                            <input type="text" class="ampElastic" placeholder="Amplitude">
+                            <input type="text" class="waveElastic" placeholder="nb de vagues">
+                        </div>
+                        <div class="inputs rough">
+                            <select class="modeleRough">
+                                <option value="">Modèle</option>
+                                <option value="Power0">Power 0</option>
+                                <option value="Power1">Power 1</option>
+                                <option value="Power2">Power 2</option>
+                                <option value="Power3">Power 3</option>
+                                <option value="Power4">Power 4</option>
+                                <option value="Back">Back</option>
+                                <option value="Elastic">Elastic</option>
+                                <option value="Bounce">Bounce</option>
+                                <option value="Circ">Circ</option>
+                                <option value="Expo">Expo</option>
+                                <option value="Sine">Sine</option>
+                            </select>
+                            <input type="text" class="forceRough" placeholder="Force">
+                            <input type="text" class="pointsRough" placeholder="Points">
+                            <select class="attenuationRough">
+                                <option value="">Atténuation</option>
+                                <option value="none">Aucun</option>
+                                <option value="in">Entrant</option>
+                                <option value="out">Sortant</option>
+                                <option value="both">Les deux</option>
+                            </select>
+                            <select class="randomRough">
+                                <option value="">Alléatoire</option>
+                                <option value="true">Vrai</option>
+                                <option value="false">Faux</option>
+                            </select>
+                            <select class="clampRough">
+                                <option value="">Limité</option>
+                                <option value="true">Vrai</option>
+                                <option value="false">Faux</option>
+                            </select>
+                        </div>
+                        <div class="inputs slowMo">
+                            <input type="text" class="lineariteSlowMo" placeholder="Linéarité">
+                            <input type="text" class="puissanceSlowMo" placeholder="Puissance">
+                            <select class="yoyoSlowMo">
+                                <option value="">Yoyo</option>
+                                <option value="true">Vrai</option>
+                                <option value="false">Faux</option>
+                            </select>
+                        </div>
+                        <div class="inputs stepped">
+                            <input type="text" class="nombreStepped" placeholder="Nombre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupeInputsReg">
+            <div class="separateurGroupeInputs">
+                <div class="inputs">
+                    <input type="text" class="prop1Tweenmax" placeholder="Propriété 1">
+                    <input type="text" class="val1Tweenmax" placeholder="Valeur 1">
+                    <input type="text" class="prop2Tweenmax" placeholder="Propriété 2">
+                    <input type="text" class="val2Tweenmax" placeholder="Valeur 2">
+                    <input type="text" class="prop3Tweenmax" placeholder="Propriété 3">
+                    <input type="text" class="val3Tweenmax" placeholder="Valeur 3">
+                </div>
+                <div class="inputs">
+                    <input type="text" class="prop4Tweenmax" placeholder="Propriété 4">
+                    <input type="text" class="val4Tweenmax" placeholder="Valeur 4">
+                    <input type="text" class="prop5Tweenmax" placeholder="Propriété 5">
+                    <input type="text" class="val5Tweenmax" placeholder="Valeur 5">
+                    <input type="text" class="prop6Tweenmax" placeholder="Propriété 6">
+                    <input type="text" class="val6Tweenmax" placeholder="Valeur 6">
+                </div>
+            </div>
+            <div class="separateurGroupeInputs">
+                <div class="inputs">
+                    <input type="text" class="dureeTweenmax" placeholder="Durée (sec)">
+                    <input type="text" class="delai" placeholder="Délai (sec)">
+                    <input type="text" class="repetitions" placeholder="Nb répétitions">
+                    <input type="text" class="delaiRep" placeholder="Délai rep. (sec)">
+                    <select class="yoyo">
+                        <option value="">Yoyo</option>
+                        <option value="true">Vrai</option>
+                        <option value="false">Faux</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs">
+                <input type="button" class="startTweenmax" value="animer" disabled>
+                <input type="button" class="boutonReset resetTweenmax" value="reset dernier" disabled>
+                <input type="button" class="boutonReset resetAllTweenmax" value="reset tout" disabled>
+            </div>
+        </div>
+    </section>
+    <p class="problemeEase">
+        <a target="_blank" href="http://greensock.com/ease-visualizer">GreenSock Ease Visualizer</a>
+        <a target="_blank" href="http://greensock.com/forums/topic/7952-javascript-custom-ease/page-2#entry51357">Librairie CubicBezier</a><a target="_blank" href="http://cubic-bezier.com/#.3,.0,.2,1">Visualisation courbe de bezier</a>
+        <a target="_blank" href="http://www.greensock.com/js/speed.html">Test de performance GreenSock</a>
+    </p>
+    <script src="librairies/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/easing/EasePack.min.js"></script>
+
+    <script src="librairies/CubicBezier-js/CubicBezier.js"></script>
+
+    <script src="./js/page_tweenmax.js"></script>
+    <script src="./js/general.js"></script>
+</body>
+
+</html>

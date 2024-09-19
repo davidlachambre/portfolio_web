@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Démo GreenSock - TWEENMAX</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h1 class="titreSite">Présentation</h1><img id="logoGreenSock" class="logoGreensock" src="images/logo_greensock.png">
+            <h1 class="titreSite">GreenSock</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html">ACCUEIL</a>
+            <a href="greensock_tweenmax.html">TWEENMAX</a>
+            <a href="greensock_timelinemax.html">TIMELINEMAX</a>
+            <a href="greensock_plugins.html" class="pageActive">PLUGINS</a>
+        </nav>
+    </header>
+
+    <p class="demo intro">Voici quelques plugins gratuits disponibles pour la librairie GreenSock qui ne nécessite pas l'utilisation d'autres librairies. Il existe par exemple des plugins GreenSock pour EaselJs, RaphaelJs ou KinteticJs. Ces plugins ont volontairement été omis. Les plugins nécessitant un abonnement payant ont également été omis. Vous trouverez des liens vers ceux-ci au bas de la page. Pour simplifier l'interface, les options pour le ease ont été simplifiées. Pour tester l'ensemble de leurs fonctionalités, se référer à la page Tweenmax.</p>
+
+    <!-- AttrPlugin -->
+    <section class="demo">
+        <h3>AttrPlugin <span style="color:#a8a8a8;">(animation d'attributs contenant des valeurs numériques)</span></h3>
+        <div class="contenu attrPlugin">
+            <svg class="svgAttrPlugin" width="295px" height="270px">
+                <defs>
+                    <filter id="filtreEtoile" width="1000%" height="1000%">
+                        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="8" />
+                        <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.7 0" />
+                        <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="5" />
+                        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                    </filter>
+                </defs>
+                <style type="text/css">
+                    .st0 {
+                        fill: url(#SVGID_1_);
+                        stroke: #003b34;
+                        stroke-width: 15;
+                    }
+                </style>
+                <radialGradient id="SVGID_1_" cx="147.9938" cy="133.1775" r="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" style="stop-color:#00FF00" />
+                    <stop offset="1" style="stop-color:#0000FF" />
+                </radialGradient>
+                <polygon class="st0" points="118.4,189 67.9,191.3 81.4,142.7 48.2,104.7 94.6,84.9 103.5,35.2 148,59.2 192.4,35.2 201.3,84.9 247.8,104.7 214.6,142.7 228.1,191.3 177.6,189 148,229.9" />
+            </svg>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href="https://www.vectoropenstock.com/vectors/preview/2267/super-nova-background"><span>SUPER NOVA BACKGROUND</span></a>| <span>Free vector by</span><a target="_blank" href="https://www.vectoropenstock.com/">gweb</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeAttrPlugin" placeholder="Durée (sec)">
+            <select class="easeAttrPlugin">
+                <option value="Power0">Power 0</option>
+                <option value="Power1">Power 1</option>
+                <option value="Power2">Power 2</option>
+                <option value="Power3">Power 3</option>
+                <option value="Power4">Power 4</option>
+                <option value="Back">Back</option>
+                <option value="Elastic" selected>Elastic</option>
+                <option value="Bounce">Bounce</option>
+                <option value="Rough">Rough</option>
+                <option value="SlowMo">SlowMo</option>
+                <option value="Stepped3">Stepped 3</option>
+                <option value="Stepped6">Stepped 6</option>
+                <option value="Stepped12">Stepped 12</option>
+                <option value="Circ">Circ</option>
+                <option value="Expo">Expo</option>
+                <option value="Sine">Sine</option>
+            </select>
+            <select class="animationBezierPlugin">
+                <option value="">Animation</option>
+                <option value="1">no 1</option>
+                <option value="2">no 2</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startAttrPlugin" value="animer" disabled>
+            <input type="button" class="boutonReset resetAttrPlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <!-- BezierPlugin -->
+    <section class="demo">
+        <h3>BezierPlugin <span style="color:#a8a8a8;">(animation de la position d'un élément suivant une courbe de bezier)</span></h3>
+        <div class="contenu bezierPlugin">
+            <div class="pointBezier1"></div>
+            <div class="pointBezier2"></div>
+            <div class="pointBezier3"></div>
+            <div class="pointBezier4"></div>
+            <div class="pointBezier5"></div>
+            <div class="pointBezier6"></div>
+            <img src="images/avion.svg" class="divAnimeeBezier"></img>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href="http://www.1001freedownloads.com/free-vectors/">Free Vector</a><span>by</span><a target="_blank" href="http://www.1001freedownloads.com">1001FreeDownloads.com</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeBezierPlugin" placeholder="Durée (sec)">
+            <input type="text" class="courbeBezierPlugin" placeholder="Courbe">
+            <input type="text" class="resBezierPlugin" placeholder="Résolution">
+            <select class="autoRotateBezierPlugin">
+                <option value="false">rotation : OFF</option>
+                <option value="true">rotation : ON</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startBezierPlugin" value="animer">
+            <input type="button" class="boutonReset resetBezierPlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <!-- ColorPropsPlugin -->
+    <section class="demo">
+        <h3>ColorPropsPlugin <span style="color:#a8a8a8;">(animation des propriétés concernant les couleurs)</span></h3>
+        <div class="contenu cpPlugin">
+            <div class="rondCpPlugin1"></div>
+            <div class="rondCpPlugin2"></div>
+            <div class="rondCpPlugin3"></div>
+            <div class="rondCpPlugin4"></div>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href="https://www.vectoropenstock.com/vectors/preview/71688/yellow-orange-red-paint-drops-background">Yellow orange red paint drops background </a><span>| Free vector by</span><a target="_blank" href="https://www.vectoropenstock.com/">Vector Open Stock</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeCpPlugin" placeholder="Durée (sec)">
+            <input type="text" class="couleurDebutCpPlugin" placeholder="Couleur début">
+            <input type="text" class="couleurFinCpPlugin" placeholder="Couleur fin">
+        </div>
+        <div class="inputs">
+            <input type="button" class="startCpPlugin" value="animer">
+            <input type="button" class="boutonReset resetCpPlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <!-- CSSPlugin -->
+    <section class="demo">
+        <h3>CSSPlugin <span style="color:#a8a8a8;">(animation de toutes les propriétés CSS)</span></h3>
+        <div class="contenu cssPlugin">
+            <div class="wrapperCarreCssPlugin">
+                <div class="carreCssPlugin">
+                    <div class="logoCss"></div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href='http://jaspreetchahal.org/w3c-css3-and-w3c-html5-badge-logos-in-svg/'><span>Logo CSS3 par Jaspreet Chahal</span></a>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href='http://fuyuko.net/bare-bone-css-horizontal-navigation-with-dropdown/'><span>Background écriture CSS par Fuyuko Gratton</span></a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeCssPlugin" placeholder="Durée (sec)">
+            <input type="text" class="grosseurCssPlugin" placeholder="Scale">
+            <input type="text" class="rotationCssPlugin" placeholder="Rotation">
+            <input type="text" class="opaciteCssPlugin" placeholder="Opacity">
+            <input type="text" class="transformCssPlugin" placeholder="Transform">
+            <select class="easeCssPlugin">
+                <option value="Power0">Power 0</option>
+                <option value="Power1">Power 1</option>
+                <option value="Power2" selected>Power 2</option>
+                <option value="Power3">Power 3</option>
+                <option value="Power4">Power 4</option>
+                <option value="Back">Back</option>
+                <option value="Elastic">Elastic</option>
+                <option value="Bounce">Bounce</option>
+                <option value="Rough">Rough</option>
+                <option value="SlowMo">SlowMo</option>
+                <option value="Stepped3">Stepped 3</option>
+                <option value="Stepped6">Stepped 6</option>
+                <option value="Stepped12">Stepped 12</option>
+                <option value="Circ">Circ</option>
+                <option value="Expo">Expo</option>
+                <option value="Sine">Sine</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="text" class="prop1CssPlugin" placeholder="Propriété 1">
+            <input type="text" class="val1CssPlugin" placeholder="Valeur 1">
+            <input type="text" class="prop2CssPlugin" placeholder="Propriété 2">
+            <input type="text" class="val2CssPlugin" placeholder="Valeur 2">
+            <input type="text" class="prop3CssPlugin" placeholder="Propriété 3">
+            <input type="text" class="val3CssPlugin" placeholder="Valeur 3">
+        </div>
+        <div class="inputs">
+            <input type="text" class="prop4CssPlugin" placeholder="Propriété 4">
+            <input type="text" class="val4CssPlugin" placeholder="Valeur 4">
+            <input type="text" class="prop5CssPlugin" placeholder="Propriété 5">
+            <input type="text" class="val5CssPlugin" placeholder="Valeur 5">
+            <input type="text" class="prop6CssPlugin" placeholder="Propriété 6">
+            <input type="text" class="val6CssPlugin" placeholder="Valeur 6">
+        </div>
+        <div class="inputs">
+            <input type="button" class="startCssPlugin" value="animer">
+            <input type="button" class="boutonReset resetCssPlugin" value="reset" disabled>
+        </div>
+        <!--
+        -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+-->
+    </section>
+
+    <!-- CSSRulePlugin -->
+    <section class="demo">
+        <h3>CSSRulePlugin <span style="color:#a8a8a8;">(animation des règles CSS de la feuille de style)</span></h3>
+        <div class="contenu cssRulePlugin">
+            <div class="rangeeCssRulePlugin">
+                <h3>H3</h3>
+                <h3>H3</h3>
+                <h3>H3</h3>
+                <h3>H3</h3>
+                <h3>H3</h3>
+            </div>
+            <div class="rangeeCssRulePlugin">
+                <p>P</p>
+                <p>P</p>
+                <p>P</p>
+                <p>P</p>
+                <p>P</p>
+            </div>
+            <div class="rangeeCssRulePlugin">
+                <div class="x">CLASSE X</div>
+                <div class="y">CLASSE Y</div>
+                <div class="x">CLASSE X</div>
+                <div class="y">CLASSE Y</div>
+                <div class="x">CLASSE X</div>
+            </div>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href="http://www.1001freedownloads.com/free-vectors/">Free Vector</a><span>by</span><a target="_blank" href="http://www.1001freedownloads.com">1001FreeDownloads.com</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeCssRulePlugin" placeholder="Durée (sec)">
+            <input type="text" class="selecteurCssRulePlugin" placeholder="Sélecteur">
+            <select class="typeCssRulePlugin">
+                <option value="element">Type élément</option>
+                <option value="classe">Type classe</option>
+            </select>
+            <input type="text" class="propCssRulePlugin" placeholder="Propriété">
+            <input type="text" class="valCssRulePlugin" placeholder="Valeur">
+            <select class="easeCssRulePlugin">
+                <option value="Power0" selected>Power 0</option>
+                <option value="Power1">Power 1</option>
+                <option value="Power2">Power 2</option>
+                <option value="Power3">Power 3</option>
+                <option value="Power4">Power 4</option>
+                <option value="Back">Back</option>
+                <option value="Elastic">Elastic</option>
+                <option value="Bounce">Bounce</option>
+                <option value="Rough">Rough</option>
+                <option value="SlowMo">SlowMo</option>
+                <option value="Stepped3">Stepped 3</option>
+                <option value="Stepped6">Stepped 6</option>
+                <option value="Stepped12">Stepped 12</option>
+                <option value="Circ">Circ</option>
+                <option value="Expo">Expo</option>
+                <option value="Sine">Sine</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startCssRulePlugin" value="animer">
+            <input type="button" class="boutonReset resetCssRulePlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <!-- DirectionalRotationPlugin -->
+    <section class="demo">
+        <h3>DirectionalRotationPlugin <span style="color:#a8a8a8;">(animation des propriétés de rotation)</span></h3>
+        <div class="contenu drPlugin">
+            <img src="images/horloge.svg" alt="image d'horloge">
+            <img class="grandeAiguille" src="images/grande_aiguille_horloge.svg" alt="image grande aiguille d'horloge">
+            <img class="petiteAiguille" src="images/petite_aiguille_horloge.svg" alt="image petite aiguille d'horloge">
+            <img src="images/cover_aiguilles_horloge.svg" alt="image cover d'horloge">
+        </div>
+        <div class="attribution">
+            <span>Background Image </span><a target="_blank" href='http://www.freepik.com/free-vector/vintage-clocks-pattern_857152.htm'>Designed by Freepik</a>
+            <a target="_blank" href="http://www.1001freedownloads.com/free-vectors/">Free Vector</a><span>by</span><a target="_blank" href="http://www.1001freedownloads.com">1001FreeDownloads.com</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeDrPlugin" placeholder="Durée (sec)">
+            <input type="text" class="valeurDrPlugin" placeholder="Valeur">
+            <select class="typeDrPlugin">
+                <option value="abs">Valeur absolue</option>
+                <option value="rel">Valeur relative</option>
+            </select>
+            <select class="directionDrPlugin">
+                <option value="_cw">Horaire</option>
+                <option value="_ccw">Anti-horaire</option>
+                <option value="_short">Plus court</option>
+            </select>
+            <select class="easeDrPlugin">
+                <option value="Power0">Power 0</option>
+                <option value="Power1">Power 1</option>
+                <option value="Power2" selected>Power 2</option>
+                <option value="Power3">Power 3</option>
+                <option value="Power4">Power 4</option>
+                <option value="Back">Back</option>
+                <option value="Elastic">Elastic</option>
+                <option value="Bounce">Bounce</option>
+                <option value="Rough">Rough</option>
+                <option value="SlowMo">SlowMo</option>
+                <option value="Stepped3">Stepped 3</option>
+                <option value="Stepped6">Stepped 6</option>
+                <option value="Stepped12">Stepped 12</option>
+                <option value="Circ">Circ</option>
+                <option value="Expo">Expo</option>
+                <option value="Sine">Sine</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startDrPlugin" value="animer">
+            <input type="button" class="boutonReset resetDrPlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <!-- scrollToPlugin -->
+    <section class="demo">
+        <h3>ScrollToPlugin <span style="color:#a8a8a8;">(animation de la position du scroll dans la fenêtre)</span></h3>
+        <div class="contenu scrollToPlugin">
+            <p>Lorem ipsum dolor sit amet, sit no delectus forensibus. Denique voluptatibus pro cu, et impetus pertinacia mei. Pro aeterno splendide abhorreant in, vero eloquentiam ea nec, dolor consequat philosophia ius eu. Illum eloquentiam no vim, per integre mnesarchum et.
+            </p>
+            <p>
+                Vis viderer splendide no. Usu delectus consectetuer delicatissimi ea. Mea dicta insolens accommodare et. Deserunt salutandi forensibus eu sed, ad cum iriure electram definitionem, usu ne ipsum putent. Te nec iriure tibique, mundi ludus salutandi cu per. Voluptatum voluptatibus cu sit, eum ignota praesent cu, ad solum ridens est. At pro atqui velit, sea et elit deterruisset interpretaris.
+            </p>
+            <p>
+                Ei dicat erroribus theophrastus mei, ferri scaevola mea ei, no pri dolore tibique deleniti. Cu antiopam mediocrem sadipscing per, nusquam detraxit cu ius. Natum nulla elitr eu sea. Eu ius odio quando, te hinc dicunt instructior quo.
+            </p>
+            <p>
+                Eos no eros idque minim, in recusabo suavitate has, ad laudem perpetua pro. Option commune ut vis, cu detracto erroribus liberavisse sit. Et nam tota luptatum, sit erat rebum efficiendi te. Eu errem saepe sententiae his, malis vocent in mea, vim ut discere omittantur. Habeo facete mel cu.
+            </p>
+            <p>
+                Te quo reque eligendi, te modo tritani mel. At omnes adipisci percipitur ius, dico quot homero ut has, eu qui movet partiendo laboramus. Nibh gloriatur ea mei. Ex ferri munere deserunt pri, mea albucius elaboraret ex, ocurreret contentiones te nec. Ad vis eirmod consequat. Ad quo clita alterum reprimique.
+            </p>
+            <p>
+                Nam delenit molestiae scripserit te, elit solum vivendum eam no, illud doctus partiendo vim ad. Qui te tation concludaturque, enim meliore scripserit ut vix, quot tation periculis vim ei. Harum latine nam ei, sonet dissentias scripserit est te. Nec essent similique ad. Ad equidem posidonium quo, at facete copiosae elaboraret mei, sea unum dolore ne. Est numquam detraxit sapientem ne.
+            </p>
+            <p>
+                Vel cu consul alienum laboramus, ad reque lorem nam. Has quem partem tincidunt ex, ad vis possit nostro. Eam fabulas delectus sapientem ei, et has illum doctus vulputate, aperiri virtute urbanitas id vel. Est ut brute mundi molestiae, pro putant fabellas in. Et debitis torquatos nec. No facer admodum mediocrem nam, prompta vivendum ad eam, et vis aperiri euismod.
+            </p>
+            <p>
+                Et sale viris voluptaria vis, sit ornatus temporibus ut. Mazim splendide vim ad, in causae ullamcorper sea, nihil iriure usu ne. Ad nostro similique dissentiunt mel, vim at meis timeam iracundia, reque fastidii mei at. Ad amet platonem ius, eu ponderum forensibus omittantur has, no aperiam albucius eum. Est vide oblique malorum ad, duo clita partiendo voluptatum ei.
+            </p>
+            <p>
+                Mea sale omnis eu, id reprimique neglegentur necessitatibus vix. His volumus adipisci accusata te. Mea forensibus reprehendunt ea, vis integre eripuit definitionem id. Vim ut prompta numquam euripidis. At modo audiam vix, has copiosae recteque adolescens te.
+            </p>
+            <p>
+                Nec id adhuc etiam dicta, no nec regione reprimique definitionem, quo eu deserunt incorrupte. Per velit viderer eleifend an, ne est autem mollis facilisi, sea ne dicat iudicabit ullamcorper. Sea graecis repudiare theophrastus eu, ne sint tantas his. Ei his congue meliore, timeam mandamus inciderint et eum. Id aliquid conceptam sea, apeirian vulputate qui eu, animal dolorem consequat ut eam. No per zril iudicabit ocurreret. Aperiri euripidis ei sed, habeo vulputate at est.
+            </p>
+            <p>Lorem ipsum dolor sit amet, sit no delectus forensibus. Denique voluptatibus pro cu, et impetus pertinacia mei. Pro aeterno splendide abhorreant in, vero eloquentiam ea nec, dolor consequat philosophia ius eu. Illum eloquentiam no vim, per integre mnesarchum et.
+            </p>
+            <p>
+                Vis viderer splendide no. Usu delectus consectetuer delicatissimi ea. Mea dicta insolens accommodare et. Deserunt salutandi forensibus eu sed, ad cum iriure electram definitionem, usu ne ipsum putent. Te nec iriure tibique, mundi ludus salutandi cu per. Voluptatum voluptatibus cu sit, eum ignota praesent cu, ad solum ridens est. At pro atqui velit, sea et elit deterruisset interpretaris.
+            </p>
+            <p>
+                Ei dicat erroribus theophrastus mei, ferri scaevola mea ei, no pri dolore tibique deleniti. Cu antiopam mediocrem sadipscing per, nusquam detraxit cu ius. Natum nulla elitr eu sea. Eu ius odio quando, te hinc dicunt instructior quo.
+            </p>
+            <p>
+                Eos no eros idque minim, in recusabo suavitate has, ad laudem perpetua pro. Option commune ut vis, cu detracto erroribus liberavisse sit. Et nam tota luptatum, sit erat rebum efficiendi te. Eu errem saepe sententiae his, malis vocent in mea, vim ut discere omittantur. Habeo facete mel cu.
+            </p>
+            <p>
+                Te quo reque eligendi, te modo tritani mel. At omnes adipisci percipitur ius, dico quot homero ut has, eu qui movet partiendo laboramus. Nibh gloriatur ea mei. Ex ferri munere deserunt pri, mea albucius elaboraret ex, ocurreret contentiones te nec. Ad vis eirmod consequat. Ad quo clita alterum reprimique.
+            </p>
+            <p>
+                Nam delenit molestiae scripserit te, elit solum vivendum eam no, illud doctus partiendo vim ad. Qui te tation concludaturque, enim meliore scripserit ut vix, quot tation periculis vim ei. Harum latine nam ei, sonet dissentias scripserit est te. Nec essent similique ad. Ad equidem posidonium quo, at facete copiosae elaboraret mei, sea unum dolore ne. Est numquam detraxit sapientem ne.
+            </p>
+            <p>
+                Vel cu consul alienum laboramus, ad reque lorem nam. Has quem partem tincidunt ex, ad vis possit nostro. Eam fabulas delectus sapientem ei, et has illum doctus vulputate, aperiri virtute urbanitas id vel. Est ut brute mundi molestiae, pro putant fabellas in. Et debitis torquatos nec. No facer admodum mediocrem nam, prompta vivendum ad eam, et vis aperiri euismod.
+            </p>
+            <p>
+                Et sale viris voluptaria vis, sit ornatus temporibus ut. Mazim splendide vim ad, in causae ullamcorper sea, nihil iriure usu ne. Ad nostro similique dissentiunt mel, vim at meis timeam iracundia, reque fastidii mei at. Ad amet platonem ius, eu ponderum forensibus omittantur has, no aperiam albucius eum. Est vide oblique malorum ad, duo clita partiendo voluptatum ei.
+            </p>
+            <p>
+                Mea sale omnis eu, id reprimique neglegentur necessitatibus vix. His volumus adipisci accusata te. Mea forensibus reprehendunt ea, vis integre eripuit definitionem id. Vim ut prompta numquam euripidis. At modo audiam vix, has copiosae recteque adolescens te.
+            </p>
+            <p>
+                Nec id adhuc etiam dicta, no nec regione reprimique definitionem, quo eu deserunt incorrupte. Per velit viderer eleifend an, ne est autem mollis facilisi, sea ne dicat iudicabit ullamcorper. Sea graecis repudiare theophrastus eu, ne sint tantas his. Ei his congue meliore, timeam mandamus inciderint et eum. Id aliquid conceptam sea, apeirian vulputate qui eu, animal dolorem consequat ut eam. No per zril iudicabit ocurreret. Aperiri euripidis ei sed, habeo vulputate at est.
+            </p>
+        </div>
+        <div class="inputs">
+            <input type="text" class="yScrollToPlugin" placeholder="Valeur en Y">
+            <input type="text" class="dureeScrollToPlugin" placeholder="Durée (sec)">
+            <input type="text" class="easeInXScrollToPlugin" placeholder="Ease In X">
+            <input type="text" class="easeInYScrollToPlugin" placeholder="Ease In Y">
+            <input type="text" class="easeOutXScrollToPlugin" placeholder="Ease Out X">
+            <input type="text" class="easeOutYScrollToPlugin" placeholder="Ease Out Y">
+        </div>
+        <div class="inputs">
+            <input type="button" class="startScrollToPlugin" value="animer">
+        </div>
+    </section>
+
+    <!-- TextPlugin -->
+    <section class="demo">
+        <h3>TextPlugin <span style="color:#a8a8a8;">(animation du texte - remplace l'ancien contenu par du nouveau)</span></h3>
+        <div class="contenu textPlugin">
+            <p class="paragrapheTextPlugin noir"></p>
+        </div>
+        <div class="attribution">
+            <a target="_blank" href="https://www.vectoropenstock.com/vectors/preview/70833/desktop-monitor-and-keyboard">Desktop Monitor and Keyboard</a><span>| Free vector by</span><a target="_blank" href="https://www.vectoropenstock.com/">Free Vector</a>
+        </div>
+        <div class="inputs">
+            <input type="text" class="departTxtPlugin" placeholder="Phrase de départ">
+            <input type="text" class="arriveeTxtPlugin" placeholder="Phrase finale">
+        </div>
+        <div class="inputs">
+            <input type="text" class="dureeTxtPlugin" placeholder="Durée (sec)">
+            <select class="typeTxtPlugin">
+                <option value="">par lettre</option>
+                <option value=" ">par mot</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input type="button" class="startTxtPlugin" value="animer">
+            <input type="button" class="boutonReset resetTxtPlugin" value="reset" disabled>
+        </div>
+    </section>
+
+    <div class="liensPlugins">
+        <h5>PLUGINS<a target="_blank" href="https://greensock.com/club/" >PAYANT$</a></h5>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/ScrambleTextPlugin/">ScrambleTextPlugin</a>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/DrawSVGPlugin/">DrawSVGPlugin</a>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/MorphSVGPlugin/">MorphSVGPlugin</a>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/PhysicsPropsPlugin/">PhysicsPropsPlugin</a>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/ThrowPropsPlugin/">ThrowPropsPlugin</a>
+        <a class="lienPlugin" target="_blank" href="http://greensock.com/docs/#/HTML5/GSAP/Plugins/SplitText/">SplitText</a>
+    </div>
+    <script src="librairies/greensock-js/src/minified/TweenLite.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/TimelineLite.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/easing/EasePack.min.js"></script>
+
+
+    <script src="librairies/greensock-js/src/minified/plugins/AttrPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/BezierPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/ColorPropsPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/CSSRulePlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/DirectionalRotationPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script src="librairies/greensock-js/src/minified/plugins/TextPlugin.min.js"></script>
+
+    <script src="librairies/CubicBezier-js/CubicBezier.js"></script>
+
+    <script src="./js/page_plugins.js"></script>
+    <script src="./js/general.js"></script>
+</body>
+
+</html>
